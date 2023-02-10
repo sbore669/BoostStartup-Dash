@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+.main.container{
+    width: 65%;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    box-shadow: 0 0 3px black;
+    border-radius: 0.45rem;
+    padding: 1rem;
+}
+.login-left{
+    background-color: #84BE29;
+    border-radius: 0.45rem 0 0 0.45rem;
+}
+
+.sewasologo img{
+    width: 120px;
+}
+input[type=submit]{
+    background-color: #84BE29;
+    color: #fff;
+}
+
+.imgContainer{
+    margin: auto;
+    display: flex;
+    height: 100%;
+
+}
+.img{
+    display: flex;
+    margin: auto;
+}
+
+#erreur{
+
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #972d2d8f;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  
+
+
