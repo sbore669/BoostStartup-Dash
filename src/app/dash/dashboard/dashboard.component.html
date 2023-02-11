@@ -12,14 +12,12 @@
                   <div class="card info-card sales-card">
                      <div class="card-body">
                         <h5 class="card-title">Total <span> Collecter </span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-currency-dollar"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>145</h6>
-                              <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                 class="text-muted small pt-2 ps-1">increase</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -32,14 +30,12 @@
 
                      <div class="card-body">
                         <h5 class="card-title">Total <span>Startups</span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-building"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>$3,264</h6>
-                              <!-- <span class="text-success small pt-1 fw-bold">8%</span> -->
-                              <span class="text-muted small pt-2 ps-1">Valider</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -51,14 +47,12 @@
 
                      <div class="card-body">
                         <h5 class="card-title">Total <span> Investisseurs</span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-people"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>$3,264</h6>
-                              <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                 class="text-muted small pt-2 ps-1">increase</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -70,14 +64,12 @@
                   <div class="card info-card customers-card">
                      <div class="card-body">
                         <h5 class="card-title">Total <span> Projets</span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-card-heading"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>1244</h6>
-                              <span class="text-danger small pt-1 fw-bold">12%</span> <span
-                                 class="text-muted small pt-2 ps-1">decrease</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -89,14 +81,12 @@
 
                      <div class="card-body">
                         <h5 class="card-title">Total <span>Investissement</span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-cash-coin"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>1244</h6>
-                              <span class="text-danger small pt-1 fw-bold">12%</span> <span
-                                 class="text-muted small pt-2 ps-1">decrease</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -108,14 +98,12 @@
 
                      <div class="card-body">
                         <h5 class="card-title">Total <span> Donation</span></h5>
-                        <div class="d-flex align-items-center">
-                           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center dashco">
+                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
                               <i class="bi bi-gift"></i>
                            </div>
                            <div class="ps-3">
-                              <h6>1244</h6>
-                              <span class="text-danger small pt-1 fw-bold">12%</span> <span
-                                 class="text-muted small pt-2 ps-1">decrease</span>
+                              <h6>14500000000</h6>
                            </div>
                         </div>
                      </div>
@@ -127,11 +115,12 @@
                <div class="col-12">
                   <div class="card top-selling overflow-auto">
                      <div class="filter">
-                        <button class="btn btn-primary mx-3">Ajouter</button>
+                        <button class="mx-3 buttoo" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Ajouter</button>
                      </div>
                      <div class="card-body pb-0">
                         <h5 class="card-title">Type de projets</h5>
-                        <table class="table table-borderless">
+                        <!-- | *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }" -->
+                        <table class="table table-borderless" >
                            <thead>
                               <tr>
                                  <th scope="col">Id</th>
@@ -161,7 +150,9 @@
                                  <td><button class="btn btn-warning btn-sm">modifier</button></td>
                                  <td><button class="btn btn-danger btn-sm">supprimer</button></td>
                               </tr>
+                              
                            </tbody>
+                           <pagination-controls (pageChange)="p = $event"></pagination-controls>
                         </table>
                      </div>
                   </div>
@@ -170,5 +161,25 @@
             </div>
          </div>
       </div>
+      
    </section>
+   <button routerLink="/detailprojet">detailsii</button>
+   
 </main>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">...</div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Save changes</button>
+       </div>
+     </div>
+   </div>
+ </div>

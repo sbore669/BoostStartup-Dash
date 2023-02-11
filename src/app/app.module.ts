@@ -16,6 +16,12 @@ import { PagesError404Component } from './pages/pages-error404/pages-error404.co
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
 import { LoginComponent } from './login/login.component';
 import { PrincipaleComponent } from './principale/principale.component';
+import { DetailProjetsComponent } from './dash/detail-projets/detail-projets.component';
+import { StartupsComponent } from './dash/startups/startups.component';
+import { ProjetsComponent } from './dash/projets/projets.component';
+import { InvestissementsComponent } from './dash/investissements/investissements.component';
+import { InvestisseursComponent } from './dash/investisseurs/investisseurs.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -33,10 +39,17 @@ import { PrincipaleComponent } from './principale/principale.component';
     PagesBlankComponent,
     LoginComponent,
     PrincipaleComponent,
+    DetailProjetsComponent,
+    StartupsComponent,
+    ProjetsComponent,
+    InvestissementsComponent,
+    InvestisseursComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

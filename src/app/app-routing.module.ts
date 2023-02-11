@@ -6,15 +6,17 @@ import { ProjetsComponent } from './dash/projets/projets.component';
 import { StartupsComponent } from './dash/startups/startups.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dash/dashboard/dashboard.component';
-import { PagesError404Component } from './pages/pages-error404/pages-error404.component';
-import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 import { PrincipaleComponent } from './principale/principale.component';
+import { DetailProjetsComponent } from './dash/detail-projets/detail-projets.component';
+
 
 const routes: Routes = [
   { path: "login", component: LoginComponent, },
+  
+  
   {
     path: "principal", component: PrincipaleComponent,
     children: [
@@ -27,10 +29,9 @@ const routes: Routes = [
       { path: 'pages-login', component: PagesLoginComponent },
       { path: 'pages-register', component: PagesRegisterComponent },
       { path: 'user-profile', component: UsersProfileComponent },
+      { path: 'detailprojet', component: DetailProjetsComponent },
     ]
   },
-  // { path: '', component: DashboardComponent },
-
 
   { path: "", redirectTo: "login", pathMatch: 'full' },
 

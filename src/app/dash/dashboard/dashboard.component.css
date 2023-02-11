@@ -1,0 +1,39 @@
+.btn-group-sm>.btn, .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: 1.2rem;
+}
+.dashco{
+    background: #7ED957;
+    border-radius: 15px;
+}
+.dashboard .info-card h6 {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+}
+.dashboard .revenue-card .card-icon {
+    color: #7ED957;
+    background: #fff;
+    border: 1px solid;
+}
+.dashboard .sales-card .card-icon {
+    color: #7ED957;
+    background: #fff;
+    border: 1px solid;
+}
+.dashboard .customers-card .card-icon {
+    color: #7ED957;
+    background: #fff;
+    border: 1px solid;
+}
+.buttoo{
+    background: #7ED957;
+    border: #7ED957;
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}

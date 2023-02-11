@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 export class PrincipaleComponent implements OnInit {
 
   title = 'admindashboard';
-  constructor(private elementRef: ElementRef,  public  _router: Router) { }
+  constructor() { }
 
   ngOnInit() {
 
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.src = "../assets/js/main.js";
-    this.elementRef.nativeElement.appendChild(s);
+    // var s = document.createElement("script");
+    // s.type = "text/javascript";
+    // s.src = "../assets/js/main.js";
+    // this.elementRef.nativeElement.appendChild(s);
   }
 
 }

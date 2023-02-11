@@ -6,6 +6,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  p: number = 1;
+  collection: any;
 
   constructor(private elementRef: ElementRef) { }
 
