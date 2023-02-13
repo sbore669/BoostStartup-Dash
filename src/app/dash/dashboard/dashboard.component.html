@@ -1,185 +1,226 @@
 <main id="main" class="main">
-   <div class="pagetitle">
-      <h1>Dashboard</h1>
-   </div>
-   <section class="section dashboard">
-      <div class="row">
-         <div class="col">
-            <div class="row">
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+  </div>
+  <section class="section dashboard">
+    <div class="row">
+      <div class="col">
+        <div class="row">
 
 
-               <div class="col-xxl-4 col-md-4">
-                  <div class="card info-card sales-card">
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span> Collecter </span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-currency-dollar"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
+          <div class="col-xxl-4 col-md-4">
+            <div class="card info-card sales-card">
+              <div class="card-body">
+                <h5 class="card-title">Total <span> Collecter </span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-currency-dollar"></i>
                   </div>
-               </div>
-
-
-               <div class="col-xxl-4 col-md-4">
-                  <div class="card info-card revenue-card">
-
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span>Startups</span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-building"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
                   </div>
-               </div>
-
-               <div class="col-xxl-4 col-md-4">
-                  <div class="card info-card revenue-card">
-
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span> Investisseurs</span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-people"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-
-               <div class="col-xxl-4 col-xl-4">
-                  <div class="card info-card customers-card">
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span> Projets</span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-card-heading"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-xxl-4 col-xl-4">
-                  <div class="card info-card customers-card">
-
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span>Investissement</span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-cash-coin"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-xxl-4 col-xl-4">
-                  <div class="card info-card customers-card">
-
-                     <div class="card-body">
-                        <h5 class="card-title">Total <span> Donation</span></h5>
-                        <div class="d-flex align-items-center dashco">
-                           <div class="card-icon rounded d-flex align-items-center justify-content-center">
-                              <i class="bi bi-gift"></i>
-                           </div>
-                           <div class="ps-3">
-                              <h6>14500000000</h6>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-
-               <!-- PAS TOUCHE -->
-               <div class="col-12">
-                  <div class="card top-selling overflow-auto">
-                     <div class="filter">
-                        <button class="mx-3 buttoo" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Ajouter</button>
-                     </div>
-                     <div class="card-body pb-0">
-                        <h5 class="card-title">Type de projets</h5>
-                        <!-- | *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }" -->
-                        <table class="table table-borderless" >
-                           <thead>
-                              <tr>
-                                 <th scope="col">Id</th>
-                                 <th scope="col">Nom</th>
-                                 <th scope="col">Description</th>
-                                 <th scope="col">Nombre d'investisseurs</th>
-                                 <th scope="col"></th>
-                                 <th scope="col"></th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                                 <td>Agriculture</td>
-                                 <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
-                                    </span></td>
-                                 <td class="fw-bold">124</td>
-                                 <td><button class="btn btn-warning btn-sm">modifier</button></td>
-                                 <td><button class="btn btn-danger btn-sm">supprimer</button></td>
-                              </tr>
-                              <tr>
-                                 <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                                 <td>Education</td>
-                                 <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
-                                    </span></td>
-                                 <td class="fw-bold">124</td>
-                                 <td><button class="btn btn-warning btn-sm">modifier</button></td>
-                                 <td><button class="btn btn-danger btn-sm">supprimer</button></td>
-                              </tr>
-                              
-                           </tbody>
-                           <pagination-controls (pageChange)="p = $event"></pagination-controls>
-                        </table>
-                     </div>
-                  </div>
-               </div>
-               <!-- PAS TOUCHE -->
+                </div>
+              </div>
             </div>
-         </div>
-      </div>
-      
-   </section>
-   <button routerLink="/detailprojet">detailsii</button>
-   
-</main>
+          </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-       </div>
-       <div class="modal-body">...</div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-         <button type="button" class="btn btn-primary">Save changes</button>
-       </div>
-     </div>
-   </div>
- </div>
+
+          <div class="col-xxl-4 col-md-4">
+            <div class="card info-card revenue-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Total <span>Startups</span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-building"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-4 col-md-4">
+            <div class="card info-card revenue-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Total <span> Investisseurs</span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xxl-4 col-xl-4">
+            <div class="card info-card customers-card">
+              <div class="card-body">
+                <h5 class="card-title">Total <span> Projets</span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-card-heading"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-4 col-xl-4">
+            <div class="card info-card customers-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Total <span>Investissement</span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-cash-coin"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-4 col-xl-4">
+            <div class="card info-card customers-card">
+
+              <div class="card-body">
+                <h5 class="card-title">Total <span> Donation</span></h5>
+                <div class="d-flex align-items-center dashco">
+                  <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                    <i class="bi bi-gift"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>14500000000</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- PAS TOUCHE -->
+          <div class="col-12">
+            <div class="card top-selling overflow-auto">
+              <div class="filter">
+                <button class="mx-3 buttoo" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter</button>
+              </div>
+              <div class="card-body pb-0">
+                <h5 class="card-title">Type de projets</h5>
+                <!-- | *ngFor="let item of collection | paginate: { itemsPerPage: 3, currentPage: p }" -->
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Nombre d'investisseurs</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                      <td>Agriculture</td>
+                      <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
+                        </span></td>
+                      <td class="fw-bold">124</td>
+                      <td><button class="btn btn-warning btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal1">modifier</button></td>
+                      <td><button class="btn btn-danger btn-sm">supprimer</button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                      <td>Education</td>
+                      <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
+                        </span></td>
+                      <td class="fw-bold">124</td>
+                      <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1">modifier</button></td>
+                      <td><button class="btn btn-danger btn-sm">supprimer</button></td>
+                    </tr>
+
+                  </tbody>
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- PAS TOUCHE -->
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+<!-- Modal pour ajouter un type de projets -->
+
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 mx-5" id="exampleModalLabel">Ajouter un type de projets</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+        <div class="modal-body">
+
+          <!-- contenu du modal  -->
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Nom du type de Projets</label>
+          </div>
+          <!-- fin contenu du modal  -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="buttoo1" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="buttoo">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- fin Modal pour ajouter un type de projets -->
+
+<!-- Modal pour modifier un type de projets -->
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 mx-5" id="exampleModalLabel">Modifier un type de projets</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+        <div class="modal-body">
+
+          <!-- contenu du modal  -->
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Nom du type de Projets</label>
+          </div>
+          <!-- fin contenu du modal  -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="buttoo1" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="buttoo">Modifier</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal pour modifier un type de projets -->
