@@ -17,7 +17,7 @@
                     <i class="bi bi-currency-dollar"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>14500000000</h6>
+                    <h6>{{totalObtnu}}</h6>
                   </div>
                 </div>
               </div>
@@ -34,8 +34,8 @@
                   <div class="card-icon rounded d-flex align-items-center justify-content-center">
                     <i class="bi bi-building"></i>
                   </div>
-                  <div class="ps-3">
-                    <h6>14500000000</h6>
+                  <div class="ps-3 text-center">
+                    <h6>{{totalStartups}}</h6>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                     <i class="bi bi-people"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>14500000000</h6>
+                    <h6>{{totalInvestisseurs}}</h6>
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
                     <i class="bi bi-card-heading"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>14500000000</h6>
+                    <h6>{{totalprojets}}</h6>
                   </div>
                 </div>
               </div>
@@ -80,13 +80,13 @@
             <div class="card info-card customers-card">
 
               <div class="card-body">
-                <h5 class="card-title">Total <span>Investissement</span></h5>
+                <h5 class="card-title">Total <span>Prêt</span></h5>
                 <div class="d-flex align-items-center dashco">
                   <div class="card-icon rounded d-flex align-items-center justify-content-center">
                     <i class="bi bi-cash-coin"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>14500000000</h6>
+                    <h6>{{totalprets}}</h6>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@
                     <i class="bi bi-gift"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>14500000000</h6>
+                    <h6>{{totalDon}}</h6>
                   </div>
                 </div>
               </div>
@@ -125,32 +125,22 @@
                     <tr>
                       <th scope="col">Id</th>
                       <th scope="col">Nom</th>
-                      <th scope="col">Description</th>
-                      <th scope="col">Nombre d'investisseurs</th>
+                      <!-- <th scope="col">Description</th> -->
+                      <!-- <th scope="col">Nombre d'investisseurs</th> -->
                       <th scope="col"></th>
                       <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody *ngFor="let typ of typesProjet">
                     <tr>
-                      <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                      <td>Agriculture</td>
-                      <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
-                        </span></td>
-                      <td class="fw-bold">124</td>
-                      <td><button class="btn btn-warning btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal1">modifier</button></td>
+                      <td>{{typ.idtypeprojets}}</td>
+                      <td>{{typ.nomtype}}</td>
+                      <!-- <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
+                        </span></td> -->
+                      <!-- <td class="fw-bold">124</td> -->
+                      <td><button class="btn btn-warning btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getUnType(typ.idtypeprojets)">modifier</button></td>
                       <td><button class="btn btn-danger btn-sm">supprimer</button></td>
                     </tr>
-                    <tr>
-                      <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                      <td>Education</td>
-                      <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
-                        </span></td>
-                      <td class="fw-bold">124</td>
-                      <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1">modifier</button></td>
-                      <td><button class="btn btn-danger btn-sm">supprimer</button></td>
-                    </tr>
-
                   </tbody>
                   <pagination-controls (pageChange)="p = $event"></pagination-controls>
                 </table>
@@ -173,20 +163,21 @@
         <h1 class="modal-title fs-5 mx-5" id="exampleModalLabel">Ajouter un type de projets</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form>
+      <form  (ngSubmit)="onSubmit()">
         <div class="modal-body">
 
           <!-- contenu du modal  -->
 
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="text" class="form-control" minlength="3" maxlength="20" id="floatingInput" name="nomtype"  
+            [(ngModel)]="nomtype" placeholder="nom projet" >
             <label for="floatingInput">Nom du type de Projets</label>
           </div>
           <!-- fin contenu du modal  -->
         </div>
         <div class="modal-footer">
           <button type="button" class="buttoo1" data-bs-dismiss="modal">Annuler</button>
-          <button type="button" class="buttoo">Ajouter</button>
+          <button type="submit" class="buttoo">Ajouter</button>
         </div>
       </form>
     </div>
@@ -203,20 +194,20 @@
         <h1 class="modal-title fs-5 mx-5" id="exampleModalLabel">Modifier un type de projets</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form>
+      <form #update="ngForm" (ngSubmit)="Modifiertypedeprojet(unType.idtypeprojets)">
         <div class="modal-body">
 
           <!-- contenu du modal  -->
 
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="text" class="form-control" id="nomtype" name="nomtype"  [(ngModel)]="form.nomtype" ngModel="{{nntype}}" placeholder="name@example.com">
             <label for="floatingInput">Nom du type de Projets</label>
           </div>
           <!-- fin contenu du modal  -->
         </div>
         <div class="modal-footer">
           <button type="button" class="buttoo1" data-bs-dismiss="modal">Annuler</button>
-          <button type="button" class="buttoo">Modifier</button>
+          <button type="submit"  class="buttoo">Modifier</button>
         </div>
       </form>
     </div>

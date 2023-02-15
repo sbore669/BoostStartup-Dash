@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6 login-left">
             <div class="imgContainer">
-                <img class="img-fluid" src="assets/gif/loggAdmin.gif"  alt="">
+                <img class="img-fluid" src="assets/gif/loggAdmin.gif" alt="">
             </div>
         </div>
         <div class="col-md-6 login-right p-5 text-center">
@@ -17,21 +17,29 @@
                     Veuillez remplir les champs pour vous connecter
                 </p>
             </div>
-            <form  id="login" >
+            <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
                 <!-- <label id="erreur" *ngIf="error">{{erreur}}</label> -->
 
 
                 <div class="form-group mb-3">
                     <!-- <input type="text" [(ngModel)]="pseudo" name="pseudo"   class="form-control px-2 py-1" placeholder="Pseudo"> -->
-                    <input type="text" name="pseudo"   class="form-control px-2 py-1" placeholder="Pseudo">
+                    <input type="text" name="pseudo" class="form-control px-2 py-1" [(ngModel)]="form.username" required
+                        #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+                        placeholder="Pseudo">
                 </div>
                 <div class="form-group mb-3">
                     <!-- <input type="password" name="password" [(ngModel)]="password" class="form-control px-2 py-1" placeholder="Mot de passe"> -->
-                    <input type="password" name="password"  class="form-control px-2 py-1" placeholder="Mot de passe">
+                    <input type="password" name="password" class="form-control px-2 py-1" [(ngModel)]="form.password"
+                        placeholder="Mots de passe" required minlength="6" #password="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && password.errors }" placeholder="Mot de passe">
                 </div>
                 <div class="form-group">
                     <!-- <input type="submit" name="submit" value="Connexion" [disabled]="!f.valid"  class="form-control px-2 py-1"> -->
-                    <input type="submit" name="submit" routerLink="/principal" value="Connexion"   class="form-control px-2 py-1">
+                    <input [disabled]="!f.valid" type="submit" name="submit" value="Connexion"
+                        class="form-control px-2 py-1">
+                    <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
+                        Login failed: {{ errorMessage }}
+                    </div>
                 </div>
             </form>
             <div class="err_msg mt-3">
