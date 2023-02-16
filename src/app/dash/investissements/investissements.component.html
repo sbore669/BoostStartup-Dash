@@ -1,53 +1,178 @@
 <main id="main" class="main">
-    <div class="pagetitle">
-        <h1>Investissement</h1>
-    </div>
-    <table class="table align-middle mb-0 bg-white">
-        <thead class="bg-light">
-            <tr>
-                <th>Nom projets</th>
-                <th>Collecter</th>
-                <th>Nombre d'investisseurs</th>
-                <th>Date</th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="d-flex align-items-center">
-                        <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt=""
-                            style="width: 45px; height: 45px" class="rounded-circle" />
-                        <div class="ms-3">
-                            <p class="fw-bold mb-1">John Doe</p>
-                            <p class="text-muted mb-0">john.doe@gmail.com</p>
+    <p>startups works!</p>
+    <!-- llllllllljkhkjhkjhgjgjhghjghjsgcghcsgdhcjdgcjh -->
+    <div class="col">
+        <div class="row">
+
+
+            <div class="col-xxl-4 col-md-4">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Startups <span> Total </span></h5>
+                        <div class="d-flex align-items-center dashco">
+                            <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                                <i class="bi bi-currency-dollar"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h6>totalObtnu</h6>
+                            </div>
                         </div>
                     </div>
-                </td>
-                <td>
-                    <p class="fw-normal mb-1">Software engineer</p>
-                    <p class="text-muted mb-0">IT department</p>
-                </td>
-                <td>56788998</td>
-                <td>Senior</td>
-                <td>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded">
-                        Donation
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded">
-                        Prêt
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded">
-                        Action
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+
+
+            <div class="col-xxl-4 col-md-4">
+                <div class="card info-card revenue-card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Startups <span>Encours</span></h5>
+                        <div class="d-flex align-items-center dashco">
+                            <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div class="ps-3 text-center">
+                                <h6>totalStartups</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-4 col-md-4">
+                <div class="card info-card revenue-card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Total <span> Valider</span></h5>
+                        <div class="d-flex align-items-center dashco">
+                            <div class="card-icon rounded d-flex align-items-center justify-content-center">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h6>totalInvestisseurs</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- uhefuehfkushckjhsdkjchsdkjhckjsdhksdjhksdjhksdjsdksd -->
+    <div class="container-fluid pt-4 px-4" style="margin-left: -2.2%; width: 104%">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-12">
+                <h6 class="mb-0 py-1 text-center">La liste des comptes Startups</h6>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="header_fixed">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Nom projets</th>
+                                    <th>Budget du projet</th>
+                                    <th>Collecter</th>
+                                    <th>Donation collecter</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>Action</th> -->
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let start of projets">
+                                <tr>
+                                    <!-- | paginate : { itemsPerPage: 5, currentPage: p } -->
+                                    <td><img src="{{start.image}}" alt="" /></td>
+                                    <td>{{start.nomprojets}}</td>
+                                    <td>{{start.budgetPrevisonnel}}</td>
+                                    <td>{{start.soldeprojet}}</td>
+                                    <td>{{start.donationtotalobtenu}}</td>
+                                    <td>{{start.dateLancement | date: 'dd/MM/yyyy'}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                            Donation
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                            Prêt
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                            Action
+                                        </button>
+                                    </td>
+                                    <!-- <td>
+
+                                        <button [routerLink]="['/principal/user-profile',start.idUsers]"
+                                            class="btn">details</button>
+                                    </td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="pagm">
+            <pagination-controls
+              (pageChange)="p = $event"
+            ></pagination-controls>
+          </div> -->
+
+            </div>
+        </div>
+    </div>
+
 </main>
+
+<!-- <div class="pagetitle">
+        <h1>Investissement</h1>
+    </div>
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>Nom projets</th>
+                    <th>Collecter</th>
+                    <th>Nombre d'investisseurs</th>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt=""
+                                style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">Software engineer</p>
+                        <p class="text-muted mb-0">IT department</p>
+                    </td>
+                    <td>56788998</td>
+                    <td>Senior</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">
+                            Donation
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">
+                            Prêt
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">
+                            Action
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->

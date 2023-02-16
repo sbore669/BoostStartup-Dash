@@ -25,6 +25,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { DonateurComponent } from './dash/donateur/donateur.component';
+import { PreteurComponent } from './dash/preteur/preteur.component';
+import { ActionnaireComponent } from './dash/actionnaire/actionnaire.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     ProjetsComponent,
     InvestissementsComponent,
     InvestisseursComponent,
+    DonateurComponent,
+    PreteurComponent,
+    ActionnaireComponent,
 
   ],
   imports: [

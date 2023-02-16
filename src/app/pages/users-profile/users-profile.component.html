@@ -1,32 +1,20 @@
 <main id="main" class="main">
    <div class="pagetitle">
       <h1>information du Compte</h1>
-      <!-- <nav>
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-            <li class="breadcrumb-item">Users</li>
-            <li class="breadcrumb-item active">Profile</li>
-         </ol>
-      </nav> -->
    </div>
    <section class="section profile">
       <div class="row">
          <div class="col-xl-4">
             <div class="card">
                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                  <h2>Jassa</h2>
+                  <img src="{{startup.photo}}" alt="Profile" class="rounded-circle">
+                  <h2>{{startup.nomStartups}}</h2>
                   <h3>Startups</h3>
-                  <!-- <div class="social-links mt-2"> <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> <a
-                        href="#" class="facebook"><i class="bi bi-facebook"></i></a> <a href="#" class="instagram"><i
-                           class="bi bi-instagram"></i></a> <a href="#" class="linkedin"><i
-                           class="bi bi-linkedin"></i></a>
-                  </div> -->
                </div>
             </div>
-            <div class="justifie-content-arround">
-              <button class="btn btn-primary">Valider</button>
-              <button class="btn btn-danger">Rejeter</button>
+            <div class="d-flex justify-content-around ">
+              <button class="col-5 btn btn-primary btn-lg" (click)="ActiverUneStartupsParID()">Valider</button>
+              <button class="col-5 btn btn-danger btn-lg" (click)="RejeterUneStartupsParID()">Rejeter</button>
             </div>
          </div>
          <div class="col-xl-8">
@@ -42,71 +30,66 @@
                   <div class="tab-content pt-2">
                      <div class="tab-pane fade show active profile-overview" id="profile-overview">
                         <h5 class="card-title">Description de la Startup</h5>
-                        <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque
-                           temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae
-                           quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+                        <p class="small fst-italic">{{startup.descriptionStartups}}</p>
                         <h5 class="card-title">Information du Compte Startup</h5>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label ">Pseudo</div>
-                           <div class="col-lg-9 col-md-8">Jassa</div>
+                           <div class="col-lg-9 col-md-8">{{startup.username}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Email</div>
-                           <div class="col-lg-9 col-md-8">Therichpost</div>
+                           <div class="col-lg-9 col-md-8">{{startup.email}}</div>
                         </div>
-                        <div class="row">
-                           <div class="col-lg-3 col-md-4 label">Password</div>
-                           <div class="col-lg-9 col-md-8">Web Designer</div>
-                        </div>
+                        
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Contact</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.contact}}</div>
                         </div>
 
                         <h5 class="card-title">Information de la Startup</h5>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label ">Nom de Startup</div>
-                           <div class="col-lg-9 col-md-8">Jassa</div>
+                           <div class="col-lg-9 col-md-8">{{startup.nomStartups}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Secteur d'activité</div>
-                           <div class="col-lg-9 col-md-8">Therichpost</div>
+                           <div class="col-lg-9 col-md-8">{{startup.secteurActivite}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Stade de developpement</div>
-                           <div class="col-lg-9 col-md-8">Web Designer</div>
+                           <div class="col-lg-9 col-md-8">{{startup.stadeDeveloppement}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Numero d'identification</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.numeroIdentification}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Date de création</div>
-                           <div class="col-lg-9 col-md-8">Therichpost</div>
+                           <div class="col-lg-9 col-md-8">{{startup.dateCreation}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Proprietaire</div>
-                           <div class="col-lg-9 col-md-8">Web Designer</div>
+                           <div class="col-lg-9 col-md-8">{{startup.proprietaire}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Forme juridique</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.formeJuridique}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Chiffre d'affaire</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.chiffreAffaire}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Localisation</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.localisation}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Pays</div>
-                           <div class="col-lg-9 col-md-8">Ludhiana, Punjab, India</div>
+                           <div class="col-lg-9 col-md-8">{{startup.pays}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-3 col-md-4 label">Status</div>
-                           <div class="col-lg-9 col-md-8">ENCOURS</div>
+                           <div class="col-lg-9 col-md-8">{{startup.status}}</div>
                         </div>
                      </div>
 

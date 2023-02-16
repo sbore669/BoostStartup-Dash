@@ -125,19 +125,14 @@
                     <tr>
                       <th scope="col">Id</th>
                       <th scope="col">Nom</th>
-                      <!-- <th scope="col">Description</th> -->
-                      <!-- <th scope="col">Nombre d'investisseurs</th> -->
                       <th scope="col"></th>
                       <th scope="col"></th>
                     </tr>
                   </thead>
                   <tbody *ngFor="let typ of typesProjet">
-                    <tr>
+                    <tr class="border-1">
                       <td>{{typ.idtypeprojets}}</td>
                       <td>{{typ.nomtype}}</td>
-                      <!-- <td><span>ueihdiueehiuehfziehfie fh f fze fzhe fhzeifhi fue hfizu hf hihzih izeh
-                        </span></td> -->
-                      <!-- <td class="fw-bold">124</td> -->
                       <td><button class="btn btn-warning btn-sm"  data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getUnType(typ.idtypeprojets)">modifier</button></td>
                       <td><button class="btn btn-danger btn-sm">supprimer</button></td>
                     </tr>

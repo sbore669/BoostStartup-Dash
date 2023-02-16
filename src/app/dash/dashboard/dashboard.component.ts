@@ -37,6 +37,7 @@ export class DashboardComponent implements OnInit {
   form:any={
     nomtype:''
   }
+  errr: any;
 
   constructor(private elementRef: ElementRef,
     private authService: AuthService,
@@ -89,7 +90,18 @@ export class DashboardComponent implements OnInit {
           timer: 2500
         })
         this.listerTyperdeprojet();
-    })
+    },error => {
+      this.errr = error
+     // this.message = error.message
+      console.log(error);
+      Swal.fire({
+        heightAuto: false,
+        icon: 'error',
+        text: this.errr.error.message,
+        showConfirmButton: false,
+        timer: 2500
+      })
+    });
   }
 
   Modifiertypedeprojet(Idtypeprojets:number){
@@ -108,7 +120,18 @@ export class DashboardComponent implements OnInit {
         timer: 2500
       })
       this.listerTyperdeprojet();
-    })
+    },error => {
+      this.errr = error
+     // this.message = error.message
+      console.log(error);
+      Swal.fire({
+        heightAuto: false,
+        icon: 'error',
+        text: this.errr.error.message,
+        showConfirmButton: false,
+        timer: 2500
+      })
+    });
   };
   getUnType(Idtypeprojets:any){
    this.typeprojets.listeUnSeultypeprojets(Idtypeprojets).subscribe(data =>{

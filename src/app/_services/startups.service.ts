@@ -21,6 +21,11 @@ export class StartupsService {
 
     return this.http.get(`${AUTH_API}/afficher`);
   }
+  
+  //Methode pour recuperer une Startups par id
+  listerStartupsParId(idUsers:any):Observable<any> {
+    return this.http.get(`${AUTH_API}/start/${idUsers}`)
+  }
 
   listerAllStartups(): Observable<any> {
     return this.http.get(`${AUTH_API}/affall`)

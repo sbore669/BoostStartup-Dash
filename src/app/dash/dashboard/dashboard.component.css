@@ -47,4 +47,9 @@
   font-size: 15px;
   font-weight: 500;
 }
+.dashboard .top-selling .table thead {
+    background: #7ED957;
+    color: #fff;
+    height: 50px;
+}
 

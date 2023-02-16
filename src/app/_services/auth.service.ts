@@ -52,8 +52,12 @@ export class AuthService {
     const req = new HttpRequest('POST', AUTH_API + '/signout', {}, httpOptions);
     return this.http.request(req);
   }
-
-  // logout(): Observable<any> {
-  //   return this.http.post(AUTH_API + 'signout', { }, httpOptions);
-  // }
+  //Methode pour activer une Startups Par son ID
+  ActiverUneStartup(idUsers:any):Observable<any>{
+    return this.http.put(`${AUTH_API}/Activerstart/${idUsers}`,httpOptions);
+  }
+  //Methode pour rejeter une Startups par son ID
+  RejeterUneStartups(idUsers:any):Observable<any>{
+    return this.http.put(`${AUTH_API}/rejeterstart/${idUsers}`,httpOptions);
+  }
 }

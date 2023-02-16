@@ -28,7 +28,7 @@ const routes: Routes = [
       { path: 'Startups', component: StartupsComponent },
       { path: 'pages-login', component: PagesLoginComponent },
       { path: 'pages-register', component: PagesRegisterComponent },
-      { path: 'user-profile', component: UsersProfileComponent },
+      { path: 'user-profile/:idUsers', component: UsersProfileComponent },
       { path: 'detailprojet', component: DetailProjetsComponent },
     ]
   },
