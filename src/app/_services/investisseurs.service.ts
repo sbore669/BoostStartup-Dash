@@ -16,8 +16,14 @@ export class InvestisseursService {
 
   constructor(private http: HttpClient) { }
 
+  //Lister un investisseurs par son ID
   listerInvestisseursparId(idUsers: any): Observable<any>{
     return this.http.get(`${AUTH_API}/${idUsers}`)
+  }
+
+  //Liste tout les investisseurs
+  listerToutlesunvestisseur(): Observable<any>{
+    return this.http.get(`${AUTH_API}/afficher`)
   }
 
   //Recuperer le nombre total d'investisseurs
