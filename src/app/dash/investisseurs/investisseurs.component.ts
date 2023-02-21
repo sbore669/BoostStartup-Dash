@@ -10,6 +10,9 @@ import { StorageService } from 'src/app/_services/storage.service';
 })
 export class InvestisseursComponent implements OnInit {
   allinv: any;
+  p: number = 1;
+  responsive=true
+  searhText: any
 
   constructor(private authService: AuthService,
     private storageService: StorageService,

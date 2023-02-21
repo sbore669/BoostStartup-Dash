@@ -30,6 +30,6 @@ export class ActionService {
   }
   //Methode pour recuperer l'ensemble des investisseurs par 
   listerlesActionnairedunProjet(idprojet: number): Observable<any>{
-    return this.http.get(`${AUTH_API}/Projets/${idprojet}`)
+    return this.http.get(`${AUTH_API}/Projets/${idprojet}`,httpOptions)
   }
 }

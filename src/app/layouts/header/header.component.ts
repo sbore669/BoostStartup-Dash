@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   currentUser: any;
+  responsive=true
+  searhText: any
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private authService: AuthService,
@@ -25,5 +27,19 @@ export class HeaderComponent implements OnInit {
   sidebarToggle() {
     //toggle sidebar function
     this.document.body.classList.toggle('toggle-sidebar');
+  }
+  logout(): void {
+    this.authService.logout().subscribe({
+      next: res => {
+        console.log(res);
+        this.storageService.clean();
+
+        // window.location.reload();
+        this.router.navigate(['/login']);
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
   }
 }

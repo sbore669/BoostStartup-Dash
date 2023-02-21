@@ -11,6 +11,9 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 import { PrincipaleComponent } from './principale/principale.component';
 import { DetailProjetsComponent } from './dash/detail-projets/detail-projets.component';
+import { ActionnaireComponent } from './dash/actionnaire/actionnaire.component';
+import { PreteurComponent } from './dash/preteur/preteur.component';
+import { DonateurComponent } from './dash/donateur/donateur.component';
 
 
 const routes: Routes = [
@@ -30,6 +33,9 @@ const routes: Routes = [
       { path: 'pages-register', component: PagesRegisterComponent },
       { path: 'user-profile/:idUsers', component: UsersProfileComponent },
       { path: 'detailprojet', component: DetailProjetsComponent },
+      { path: 'actionnaire/:idprojet', component: ActionnaireComponent },
+      { path: 'preteur/:idprojet', component: PreteurComponent },
+      { path: 'donateur/:idprojet', component: DonateurComponent },
     ]
   },
 

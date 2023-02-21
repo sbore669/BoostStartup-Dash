@@ -12,9 +12,11 @@ import { StorageService } from 'src/app/_services/storage.service';
 export class InvestissementsComponent implements OnInit {
 
   a!:any;
-  responsive = true
   mot:any
   projets: any;
+  p: number = 1;
+  responsive=true
+  searhText: any
 
   constructor(private projetsService: ProjetsService,
     private router: Router,

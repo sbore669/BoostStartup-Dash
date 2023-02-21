@@ -1,1 +1,57 @@
-<p>actionnaire works!</p>
+<main id="main" class="main">
+    <p>Investisseurs works!</p>
+    <div class="container-fluid pt-4 px-4" style="margin-left: -2.2%; width: 104%">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-12">
+                <div class="bg-light text-center rounded p-4">
+                    <h6 class="mb-0 py-1">La liste des utilisateurs</h6>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="header_fixed py-2">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Username</th>
+                                        <th>Nom complet</th>
+                                        <th>Nombre d'action</th>
+                                        <th>Prix d'une Action</th>
+                                        <th>Montant Investi</th>
+                                        <th>Date de l'Investissement</th>
+                                        <th>Telephone</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngFor="let actii of actionnaire| paginate:{itemsPerPage: 7, currentPage: p}
+                                |filter:searhText; let i = index ">
+                                    <tr>
+                                        <!-- | paginate : { itemsPerPage: 5, currentPage: p } -->
+                                        <td><img src="{{actii.investisseur.photo}}" alt="" /></td>
+                                        <td>{{actii.investisseur.username}}</td>
+                                        <td>{{actii.investisseur.nomcomplet}}</td>
+                                        <td>{{actii.nombreaction}}</td>
+                                        <td>{{actii.prix_action}}</td>
+                                        <td>{{actii.montantInvest}}</td>
+                                        <td>{{actii.date_investissement| date: 'dd/MM/yyyy'}}</td>
+                                        <td>{{actii.investisseur.telephone}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pag">
+                                <pagination-controls (pageChange)="p = $event" nextLabel="Suivants" previousLabel="Précedents"
+                                  [responsive]="responsive"></pagination-controls>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pagm">
+                <pagination-controls
+                  (pageChange)="p = $event"
+                ></pagination-controls>
+              </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+

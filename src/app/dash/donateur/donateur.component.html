@@ -1,1 +1,55 @@
-<p>donateur works!</p>
+<main id="main" class="main">
+    <p>Investisseurs works!</p>
+    <div class="container-fluid pt-4 px-4" style="margin-left: -2.2%; width: 104%">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-12">
+                <div class="bg-light text-center rounded p-4">
+                    <h6 class="mb-0 py-1">La liste des donateurs du projets</h6>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="header_fixed py-2">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Username</th>
+                                        <th>Nom complet</th>
+                                        <th>Montant Investi</th>
+                                        <th>Date de l'Investissement</th>
+                                        <th>Telephone</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody *ngFor="let donn of donateur| paginate:{itemsPerPage: 7, currentPage: p}
+                                |filter:searhText; let i = index ">
+                                    <tr>
+                                        <!-- | paginate : { itemsPerPage: 5, currentPage: p } -->
+                                        <td><img src="{{donn.investisseur.photo}}" alt="" /></td>
+                                        <td>{{donn.investisseur.username}}</td>
+                                        <td>{{donn.investisseur.nomcomplet}}</td>
+                                        <td>{{donn.montantInvest}}</td>
+                                        <td>{{donn.date_investissement| date: 'dd/MM/yyyy'}}</td>
+                                        <td>{{donn.investisseur.telephone}}</td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pag">
+                                <pagination-controls (pageChange)="p = $event" nextLabel="Suivants" previousLabel="Précedents"
+                                  [responsive]="responsive"></pagination-controls>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pagm">
+                <pagination-controls
+                  (pageChange)="p = $event"
+                ></pagination-controls>
+              </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+

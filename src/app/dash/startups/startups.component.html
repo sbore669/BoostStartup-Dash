@@ -78,7 +78,8 @@
                                     <!-- <th>Action</th> -->
                                 </tr>
                             </thead>
-                            <tbody *ngFor="let start of allStart">
+                            <tbody *ngFor="let start of allStart| paginate:{itemsPerPage: 7, currentPage: p}
+                            |filter:searhText; let i = index">
                                 <tr>
                                     <!-- | paginate : { itemsPerPage: 5, currentPage: p } -->
                                     <td><img src="{{start.photo}}" alt="" /></td>
@@ -87,14 +88,19 @@
                                     <td>{{start.numeroIdentification}}</td>
                                     <td>{{start.chiffreAffaire}}</td>
                                     <td>{{start.formeJuridique}}</td>
-                                    <td>{{start.status}}</td>
+                                    <td><span [ngClass]="start.status== 'VALIDER' ? 'vert': 'rej'">{{start.status}}</span></td>
                                     <td>
 
                                         <button [routerLink]="['/principal/user-profile',start.idUsers]" class="btn">details</button>
                                     </td>
                                 </tr>
                             </tbody>
+                            
                         </table>
+                        <div class="pag">
+                            <pagination-controls (pageChange)="p = $event" nextLabel="Suivants" previousLabel="Précedents"
+                              [responsive]="responsive"></pagination-controls>
+                          </div>
                     </div>
                 </div>
                 <!-- <div class="pagm">

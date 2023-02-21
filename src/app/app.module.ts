@@ -28,6 +28,7 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { DonateurComponent } from './dash/donateur/donateur.component';
 import { PreteurComponent } from './dash/preteur/preteur.component';
 import { ActionnaireComponent } from './dash/actionnaire/actionnaire.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { ActionnaireComponent } from './dash/actionnaire/actionnaire.component';
     AppRoutingModule,
     NgxPaginationModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

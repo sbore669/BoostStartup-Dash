@@ -13,6 +13,9 @@ import { StorageService } from 'src/app/_services/storage.service';
 export class StartupsComponent implements OnInit {
   startupss: any;
   allStart: any;
+  p: number = 1;
+  responsive=true
+  searhText: any
 
   constructor(private authService: AuthService,
     private storageService: StorageService,

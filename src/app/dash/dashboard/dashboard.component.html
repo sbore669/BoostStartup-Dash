@@ -129,7 +129,8 @@
                       <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody *ngFor="let typ of typesProjet">
+                  <tbody *ngFor="let typ of typesProjet| paginate:{itemsPerPage: 3, currentPage: p}
+                  |filter:searhText; let i = index ">
                     <tr class="border-1">
                       <td>{{typ.idtypeprojets}}</td>
                       <td>{{typ.nomtype}}</td>
@@ -137,7 +138,10 @@
                       <td><button class="btn btn-danger btn-sm">supprimer</button></td>
                     </tr>
                   </tbody>
-                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                  <div class="pag">
+                    <pagination-controls (pageChange)="p = $event" nextLabel="Suivants" previousLabel="Précedents"
+                      [responsive]="responsive"></pagination-controls>
+                  </div>
                 </table>
               </div>
             </div>

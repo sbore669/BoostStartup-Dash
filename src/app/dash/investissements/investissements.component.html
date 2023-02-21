@@ -79,9 +79,10 @@
                                     <!-- <th>Action</th> -->
                                 </tr>
                             </thead>
-                            <tbody *ngFor="let start of projets">
+                            <tbody *ngFor="let start of projets| paginate:{itemsPerPage: 7, currentPage: p}
+                            |filter:searhText; let i = index ">
                                 <tr>
-                                    <!-- | paginate : { itemsPerPage: 5, currentPage: p } -->
+
                                     <td><img src="{{start.image}}" alt="" /></td>
                                     <td>{{start.nomprojets}}</td>
                                     <td>{{start.budgetPrevisonnel}}</td>
@@ -89,29 +90,34 @@
                                     <td>{{start.donationtotalobtenu}}</td>
                                     <td>{{start.dateLancement | date: 'dd/MM/yyyy'}}</td>
                                     <td>
-                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded"
+                                            [routerLink]="['/principal/donateur',start.idprojet]">
                                             Donation
                                         </button>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded"
+                                            [routerLink]="['/principal/preteur',start.idprojet]">
                                             Prêt
                                         </button>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/investstartp',start.idprojet]">
+                                        <button type="button" class="btn btn-link btn-sm btn-rounded"
+                                            [routerLink]="['/principal/actionnaire',start.idprojet]">
                                             Action
                                         </button>
                                     </td>
-                                    <!-- <td>
-
-                                        <button [routerLink]="['/principal/user-profile',start.idUsers]"
-                                            class="btn">details</button>
-                                    </td> -->
                                 </tr>
+
                             </tbody>
                         </table>
+                        <div class="pag">
+                            <pagination-controls (pageChange)="p = $event" nextLabel="Suivants"
+                                previousLabel="Précedents" [responsive]="responsive"></pagination-controls>
+                        </div>
                     </div>
+                    
+
                 </div>
                 <!-- <div class="pagm">
             <pagination-controls

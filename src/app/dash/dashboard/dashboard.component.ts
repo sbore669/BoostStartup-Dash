@@ -28,7 +28,8 @@ export class DashboardComponent implements OnInit {
   modff: any;
   id: any
   nomm: any;
-  
+  responsive=true
+  searhText: any
 
   idprojet:any;
   unType: any;
@@ -77,7 +78,7 @@ export class DashboardComponent implements OnInit {
   })
 
   }
-  
+
   onSubmit(){
     
     this.typeprojets.AjouterTypeprojets(this.nomtype).subscribe(res =>{
