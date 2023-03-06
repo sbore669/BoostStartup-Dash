@@ -1,4 +1,4 @@
-.card{
+/* .card{
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
 }
 .QuizTItle{
@@ -37,4 +37,77 @@
     color: #fff;
     background: #274F8A;
     border-radius: 5px;
+} */
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////// */
+
+ion-header{
+    background-color: #7ED957;
+}
+.logcv{
+    height: 40px;
+    width: 40px;
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+} 
+.cd1{
+    width: 100%;
+    height: 70vh;
+    top: 15px;
+}
+.cardprojets{
+    width: 300px;
+    background: #fff;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    margin-left: 10px;
+}
+
+
+img.imageproj {
+    width: 350px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.etatss{
+    width: 100px;
+    background: #7ED957;
+    color: #fff;
+    height: 26px;
+    border-radius: 15px 0px 0px 15px;
+    text-align: center;
+    /* position: relative;
+    left: 16px; */
+    align-self: center;
+}
+.nomprj{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.7);
+}
+.descript{
+    font-size: 12px;
+    font-weight: 500;
+}
+hr {
+    border: #38B6FF;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:#38B6FF;
+    height: 1px;
+    border-radius: 5px;
+}
+.boutn{
+    width: 100px;
+    background: #7ED957;
+    border-color: #7ED957;
 }

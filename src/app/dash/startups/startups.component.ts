@@ -16,6 +16,7 @@ export class StartupsComponent implements OnInit {
   p: number = 1;
   responsive=true
   searhText: any
+  totalStartups: any;
 
   constructor(private authService: AuthService,
     private storageService: StorageService,
@@ -26,6 +27,7 @@ export class StartupsComponent implements OnInit {
 
   ngOnInit(): void {
     this.recupererToutlesSTartups();
+    this.NombreTotaoldeStartups();
   }
 
   recupererlesStartupValide(){
@@ -38,6 +40,11 @@ export class StartupsComponent implements OnInit {
     this.startupsService.listerAllStartups().subscribe(data =>{
       this.allStart = data;
       console.log(this.allStart)
+    })
+  }
+  NombreTotaoldeStartups(){
+    this.startupsService.NombreStartups().subscribe(data =>{
+      this.totalStartups = data;
     })
   }
   

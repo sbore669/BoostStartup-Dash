@@ -1,6 +1,8 @@
 .dash{
-    background-color: rgb(191, 236, 28);
+    background-color: #7ED957;
+    color: aliceblue;
 }
 .nav-item:after{
-    background-color: rgb(191, 236, 28);
+    background-color: #7ED957;
+    color: aliceblue;
 }
