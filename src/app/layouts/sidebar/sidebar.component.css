@@ -2,7 +2,46 @@
     background-color: #7ED957;
     color: aliceblue;
 }
+
 .nav-item:after{
-    background-color: #7ED957;
+    background-color: #000000;
     color: aliceblue;
 }
+
+
+.sidebar{
+    
+    border: #fff;
+   
+}
+.deccc{
+    margin-top: 300px;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.1;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.sidebar-nav .nav-link1 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.3;
+    background: #DC4C64;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.sidebar-nav .nav-link i {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #000000;
+}
+/* <a _ngcontent-tba-c54="" type="button" class="btn bg-gradient-danger mt-4 w-100">Déconnexion</a> */
